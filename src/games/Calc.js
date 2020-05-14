@@ -1,11 +1,12 @@
+import random from '../randomaizer.js';
+
 let name = prompt("May I have your name?");
 console.log("Hello,", name, "!");
 const operation = ['+', '*', '-'];
-const num1 = Math.floor(Math.random()*100);
-const num2 = Math.floor(Math.random()*100);
-const thisOperation = operation[Math.floor(Math.random()*3)];
-console.log(num1 + thisOperation + num2);
-let str = prompt('What is calc?');
+const num1 = random(0, 100);
+const num2 = random(0, 100);
+const thisOperation = operation[random(0, operation.length)];
+let str = prompt('What is calc ' + num1 + thisOperation + num2 + ' ?');
 let calc;
 switch(thisOperation) {
 	case '+':
@@ -20,4 +21,4 @@ switch(thisOperation) {
 	calc = num1 - num2;
 	break;
 }
-str == calc ? console.log('Correct!') : console.log("Sorry! It's incorrect.");
+str == calc ? alert('Correct!') : alert("Sorry! It's incorrect.");

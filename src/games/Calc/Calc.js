@@ -1,10 +1,8 @@
-import random from '../randomaizer.js';
-
 let name = prompt("May I have your name?");
 const operation = ['+', '*', '-'];
-const num1 = random(0, 100);
-const num2 = random(0, 100);
-const thisOperation = operation[random(0, operation.length)];
+const num1 = Math.floor(Math.random() * 100);
+const num2 = Math.floor(Math.random() * 100);
+const thisOperation = operation[Math.floor(Math.random() *operation.length)];
 let calc;
 switch(thisOperation) {
 	case '+':
